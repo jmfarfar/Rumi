@@ -13,6 +13,8 @@ public class Puzzle : MonoBehaviour
     private int _emptyId = 0;
 
     private bool hasPreviousSelection;
+    private int firstSelectionId;
+    private int secondSelectionId;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +44,19 @@ public class Puzzle : MonoBehaviour
 
     public void SwitchSelectedTiles(int id)
     {
-        if (hasPreviousSelection)
+        if (!hasPreviousSelection)
         {
+            firstSelectionId = id;
+            hasPreviousSelection = true;
+        }
+        else
+        {
+            secondSelectionId = id;
+            hasPreviousSelection = false;
 
+            var tmp = images[secondSelectionId].transform.position;
+            images[secondSelectionId].transform.position = images[firstSelectionId].transform.position;
+            images[firstSelectionId].transform.position = tmp;
         }
     }
 
