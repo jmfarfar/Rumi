@@ -8,31 +8,18 @@ public class Activator : MonoBehaviour
     private GameObject puzzle;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-
-    //    Debug.Log("Activation");
-    //    puzzle.SetActive(true);
-
-    //}
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        // check if the puzzle to activate is the Order one
+        if (collision.tag == TagManager.PLAYER && Input.GetKey(KeyCode.E) && this.tag == TagManager.ORDER_PUZZLE)
         {
-            Debug.Log("Activation");
+            Debug.Log("Order Activation");
+            puzzle.SetActive(true);
+        }
+        // check if the puzzle to aactivate is the Switch one
+        else if (collision.tag == TagManager.PLAYER && Input.GetKey(KeyCode.E) && this.tag == TagManager.SWITCH_PUZZLE)
+        {
+            Debug.Log("Switch Activation");
             puzzle.SetActive(true);
         }
     }

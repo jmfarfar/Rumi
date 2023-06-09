@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Puzzle : MonoBehaviour
 {
     [SerializeField] private Transform[] images;
+    [SerializeField] private Image[] objects;
     private int[] _correctAnswer = { 8, 1, 2, 3, 4, 5, 6, 7, 0 };
     private int[] _ids = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
     private Transform _empty;
@@ -20,6 +21,7 @@ public class Puzzle : MonoBehaviour
     void Start()
     {
         //images = GetComponentsInChildren<Transform>();
+        objects = GetComponentsInChildren<Image>();
         _empty = GameObject.FindGameObjectWithTag("EmptyPuzzle").transform;
     }
 
@@ -47,16 +49,18 @@ public class Puzzle : MonoBehaviour
         if (!hasPreviousSelection)
         {
             firstSelectionId = id;
-            hasPreviousSelection = true;
+            hasPreviousSelection = !hasPreviousSelection;
+            objects[id].color = Color.red;
         }
         else
         {
             secondSelectionId = id;
-            hasPreviousSelection = false;
+            hasPreviousSelection = !hasPreviousSelection;
 
             var tmp = images[secondSelectionId].transform.position;
             images[secondSelectionId].transform.position = images[firstSelectionId].transform.position;
             images[firstSelectionId].transform.position = tmp;
+            objects[firstSelectionId].color = Color.white;
         }
     }
 
