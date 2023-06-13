@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private float _horizontal;
     private bool _isFacingRight;
+    private bool _hasDoubleJump;
 
 
     [SerializeField] private float speed = 0;
@@ -25,6 +27,18 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+
+        if (Input.GetKeyDown(KeyCode.Space) && _hasDoubleJump)
+        {
+            Jump();
+            _hasDoubleJump = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            Jump();
+            _hasDoubleJump = true;
+        }
     }
 
     void Movement()
@@ -40,11 +54,11 @@ public class Player : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
 
-        if (Input.GetKey(KeyCode.Space) && IsGrounded())
-        {
-            _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
+    private void Jump()
+    {
+        _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
     bool IsGrounded()
