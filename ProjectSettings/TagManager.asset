@@ -7,6 +7,7 @@ TagManager:
   - EmptyPuzzle
   - Puzzle
   - SwitchPuzzle
+  - Enemy
   layers:
   - Default
   - TransparentFX
