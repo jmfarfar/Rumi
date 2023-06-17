@@ -4,7 +4,7 @@ using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, ICharacter
 {
     private Rigidbody2D _rb;
     private float _horizontal;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Movement()
+    public void Movement()
     {
         _horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
