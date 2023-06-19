@@ -4,16 +4,24 @@ using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
-public class Player : MonoBehaviour, ICharacter
+public class Player : MonoBehaviour, ICharacter, IJumpable
 {
     private Rigidbody2D _rb;
     private float _horizontal;
     private bool _isFacingRight;
-    private bool _hasDoubleJump;
+    private bool _hasDoubleJump;    
+    private Vector2 delayedForce;
 
 
-    [SerializeField] private float speed = 0;
-    [SerializeField] private float jumpForce = 0;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+
+    [Header("Dash")]
+    [SerializeField] private float dashForce;
+    [SerializeField] private float dashCD;
+    [SerializeField] private float dashDuration;
+    private float dashCDTimer;
+    private bool _isDashing;
 
 
     // Start is called before the first frame update
@@ -53,7 +61,48 @@ public class Player : MonoBehaviour, ICharacter
             Vector2 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+            dashForce *= -1f;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Dash();
+        }
+        if (dashCDTimer > 0)
+        {
+            dashCDTimer -= Time.deltaTime;
+        }
+    }
+
+    private void Dash()
+    {
+        if (dashCDTimer > 0)
+        {
+            return;
+        }
+        else
+        {
+            dashCDTimer = dashCD;
+        }
+
+        _isDashing = true;
+
+        Vector2 force = dashForce * transform.right;
+        delayedForce = force;
+
+        Invoke(nameof(DelayedDashForce), 0.025f);
+
+        Invoke(nameof(ResetDash), dashDuration);
+    }
+
+    private void DelayedDashForce()
+    {
+        _rb.AddForce(delayedForce, ForceMode2D.Impulse);
+    }
+
+    private void ResetDash()
+    {
+        _isDashing = false;
     }
 
     public void Jump()
