@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/1Workspaces/Rejon/Playground_Lalo.unity
+    guid: d4aefa647e05632418a2b008b73e288a
+  - enabled: 1
+    path: Assets/1Workspaces/Rejon/MainScreen.unity
+    guid: 8100c67be7f21b141a68569c1967262d
   m_configObjects: {}
