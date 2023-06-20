@@ -523,7 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387caa13363ceb54b9df7ce2177a73fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 10
+  hitPoints: 1
 --- !u!1 &932532505
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  hitPoints: 1
 --- !u!50 &1331042392
 Rigidbody2D:
   serializedVersion: 4
@@ -1222,6 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  hitPoints: 1
   jumpForce: 12
 --- !u!1 &1762600447
 GameObject:
@@ -1257,7 +1260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 12
-  dashForce: 10
+  dashForce: 20
+  dashCD: 1
+  dashDuration: 0.25
 --- !u!212 &1762600449
 SpriteRenderer:
   m_ObjectHideFlags: 0

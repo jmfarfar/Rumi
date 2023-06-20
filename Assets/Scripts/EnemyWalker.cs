@@ -4,22 +4,22 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
-public class EnemyWalker : Enemy, ICharacter
+public class EnemyWalker : Enemy
 {
-    private void Start()
-    {
-        dir = new Vector2(8, 0);
-    }
-
     private void Update()
     {
         Movement();
+
+        if (hitPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void Movement()
+    protected override void Movement()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
-        Debug.DrawRay(transform.position, dir, Color.red);
+        //Debug.DrawRay(transform.position, dir, Color.red);
 
         // TODO: Improve this process to detect the player with a Raycast and increments velocity
         hitInfo = Physics2D.RaycastAll(transform.position, dir, 8f);
@@ -31,16 +31,15 @@ public class EnemyWalker : Enemy, ICharacter
 
         foreach (var hit in hitInfo)
         {
-            Debug.Log("Enter to not null collider");
-            Debug.Log($"Value of Collider: {hit.collider} || Value of Tag: {hit.collider.tag}");
             if (hit.collider.tag.Equals(TagManager.PLAYER))
             {
-                Debug.Log("Player Detected");
                 speed = speed < 0f ? -10f : 10f;
+                _isAttacking = true;
                 return;
             }
 
             speed = speed < 0f ? -5f : 5f;
+            _isAttacking = false;
 
         }
 

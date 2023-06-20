@@ -12,6 +12,7 @@ public class EnemyJumper : Enemy, IJumpable
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        dir *= -1;
     }
 
     // Update is called once per frame
@@ -21,7 +22,36 @@ public class EnemyJumper : Enemy, IJumpable
         {
             Jump();
         }
+        Movement();
+
+        if (hitPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+    protected override void Movement()
+    {
+        //Debug.DrawRay(transform.position, dir, Color.red);        
+
+        hitInfo = Physics2D.BoxCastAll(transform.position - new Vector3(0, 0.2f, 0), new Vector2(1.5f, 1), 0f, dir);
+
+        if (hitInfo.Length < 0)
+        {
+            return;
+        }
+
+        foreach (var hit in hitInfo)
+        {
+            if (hit.collider.tag.Equals(TagManager.PLAYER))
+            {
+                _isAttacking = true;
+                return;
+            }
+
+            _isAttacking = false;
+        }
+    }    
 
     public void Jump()
     {
