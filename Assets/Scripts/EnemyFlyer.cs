@@ -8,10 +8,15 @@ public class EnemyFlyer : Enemy, IFly
     private void Update()
     {
         Fly();
+
+        if (hitPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     public void Fly()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        Movement();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
