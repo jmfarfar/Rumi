@@ -55,17 +55,23 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
     public void Movement()
     {
         _horizontal = Input.GetAxisRaw("Horizontal");
-
-        transform.Translate(_horizontal * speed * Time.deltaTime, 0, 0);
-        animator.SetBool("isWalking", true);
-
-        if (_horizontal < 0f && _isFacingRight || _horizontal > 0f && !_isFacingRight)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            _isFacingRight = !_isFacingRight;
-            Vector2 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-            dashForce *= -1f;
+            transform.Translate(_horizontal * speed * Time.deltaTime, 0, 0);
+            animator.SetBool("isWalking", true);
+
+            if (_horizontal < 0f && _isFacingRight || _horizontal > 0f && !_isFacingRight)
+            {
+                _isFacingRight = !_isFacingRight;
+                Vector2 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+                dashForce *= -1f;
+            }
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))

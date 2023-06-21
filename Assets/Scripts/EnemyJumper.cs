@@ -26,7 +26,7 @@ public class EnemyJumper : Enemy, IJumpable
 
         if (hitPoints <= 0)
         {
-            Destroy(gameObject);
+            DestroyEnemy(gameObject);
         }
     }
 
