@@ -12,7 +12,7 @@ public class EnemyWalker : Enemy
 
         if (hitPoints <= 0)
         {
-            Destroy(gameObject);
+            DestroyEnemy(gameObject);
         }
     }
 

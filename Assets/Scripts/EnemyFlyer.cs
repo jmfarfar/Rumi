@@ -11,7 +11,7 @@ public class EnemyFlyer : Enemy, IFly
 
         if (hitPoints <= 0)
         {
-            Destroy(gameObject);
+            DestroyEnemy(gameObject);
         }
     }
     public void Fly()

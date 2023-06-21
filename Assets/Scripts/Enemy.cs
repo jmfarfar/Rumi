@@ -9,13 +9,15 @@ public abstract class Enemy : MonoBehaviour
     protected float speed;
     [SerializeField]
     protected int hitPoints;
+    [SerializeField]
+    private Animator animator;
 
     protected Vector2 dir = new Vector2(8, 0);
     protected RaycastHit2D[] hitInfo;
     protected Rigidbody2D _rb;
 
     protected bool _isAttacking;
-        
+
     protected virtual void Movement()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
@@ -49,17 +51,27 @@ public abstract class Enemy : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Enter the collision");
         if (collision.gameObject.tag == TagManager.PLAYER && !_isAttacking)
         {
-            Debug.Log("Do Damage");
+            animator.SetBool("gotHit", true);
             TakeDamage(1);
         }
-    }    
+    }
 
     protected void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position - new Vector3(0, 0.2f, 0), new Vector3(1.5f, 1, 1));
+    }
+
+    protected IEnumerator DelayDeath(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(obj);
+    }
+
+    protected void DestroyEnemy(GameObject obj)
+    {
+        StartCoroutine(DelayDeath(obj));
     }
 }
