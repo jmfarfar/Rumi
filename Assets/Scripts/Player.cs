@@ -50,6 +50,8 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
             Jump();
             _hasDoubleJump = true;
         }
+
+        animator.SetBool("isJumping", !IsGrounded());
     }
 
     public void Movement()
@@ -73,6 +75,8 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
         {
             animator.SetBool("isWalking", false);
         }
+
+        //animator.SetBool("isJumping", false);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
