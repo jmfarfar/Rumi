@@ -508,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  gameManager: {fileID: 1517070632}
 --- !u!4 &645737944
 Transform:
   m_ObjectHideFlags: 0
@@ -1680,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24214e55511bd746ba02cbae3765c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1466752696}
+  healthBar: {fileID: 1795849050}
 --- !u!4 &1517070633
 Transform:
   m_ObjectHideFlags: 0
