@@ -12,6 +12,9 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
     private bool _hasDoubleJump;
     private Vector2 delayedForce;
 
+    [Header("Health")]
+    [SerializeField] private HealthManager healthManager;
+
     [Header("Character Physics")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -31,7 +34,7 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
     void Start()
     {
         _isFacingRight = true;
-        _rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();        
     }
 
     // Update is called once per frame
@@ -127,5 +130,19 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
     bool IsGrounded()
     {
         return !(Mathf.Abs(_rb.velocity.y) > 0.0001f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            healthManager.Damage(20f);
+        }
+
+        if (collision.gameObject.CompareTag("HealthRune"))
+        {
+            healthManager.RecoverHealth(10f);
+        }
+        
     }
 }
