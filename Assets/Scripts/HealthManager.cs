@@ -22,7 +22,7 @@ public class HealthManager : MonoBehaviour
     public void Damage(float damage)
     {
         health -= damage;
-        if (health < 0)
+        if (health <= 0)
         {
             Debug.Log("Rumi is dead");
         }
