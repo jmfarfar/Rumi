@@ -9,6 +9,7 @@ TagManager:
   - SwitchPuzzle
   - Enemy
   - HealthRune
+  - Obstacle
   layers:
   - Default
   - TransparentFX
