@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class EnemyWalker : Enemy
 {
+    [SerializeField] private Animator _anim;
     private void Update()
     {
         Movement();
@@ -35,11 +36,13 @@ public class EnemyWalker : Enemy
             {
                 speed = speed < 0f ? -10f : 10f;
                 _isAttacking = true;
+                _anim.SetBool("Attacking", true);
                 return;
             }
 
             speed = speed < 0f ? -5f : 5f;
             _isAttacking = false;
+            _anim.SetBool("Attacking", false);
 
         }
 
