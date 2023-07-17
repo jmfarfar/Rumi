@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private Vector2 checkpointPos;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D playerRb;
+    [SerializeField] private HealthManager healthManager;
 
     private void Awake()
     {
@@ -39,11 +40,12 @@ public class GameController : MonoBehaviour
 
     public void Die()
     {
-        StartCoroutine(Respawn(0.5f));
+        StartCoroutine(Respawn(3f));
     }
 
     IEnumerator Respawn(float duration)
     {
+        healthManager.Damage(100f);
         playerRb.simulated = false;
         playerRb.velocity = new Vector2(0, 0);
         spriteRenderer.enabled = false;
@@ -51,5 +53,6 @@ public class GameController : MonoBehaviour
         transform.position = checkpointPos;
         spriteRenderer.enabled = true;
         playerRb.simulated = true;
+        healthManager.RecoverHealth(100f);
     }
 }

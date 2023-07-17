@@ -7,6 +7,7 @@ public class HealthManager : MonoBehaviour
     public float health = 100f;
     public float maxHealth = 100f;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class HealthManager : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Rumi is dead");
+            gameController.Die();
         }
         gameManager.UpdateHealth(health);
     }

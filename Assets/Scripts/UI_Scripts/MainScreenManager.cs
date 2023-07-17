@@ -25,7 +25,7 @@ public class MainScreenManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Playground_Lalo");
+        SceneManager.LoadScene("TestLevel");
     }
 
     public void ShowCredits()
