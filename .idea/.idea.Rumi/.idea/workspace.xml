@@ -3,31 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c61df82b-4c55-4cc1-96dd-d186518d3677" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/MainScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/MainScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/Prefabs/Spike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/Prefabs/Spike.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 Attack_Enemy 1 Attack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 Attack_Enemy 1 Attack.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 idle_Enemy 1 idle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 idle_Enemy 1 idle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 walking_Enemy 1 walking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Enemy 1 walking_Enemy 1 walking.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Levels/Ice Spikes/Spike_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Levels/Ice Spikes/Spike_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi idle_Rumi idle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi idle_Rumi idle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi idle_Rumi idle_0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi idle_Rumi idle_0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi walking_2_Rumi walking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi walking_2_Rumi walking.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi walking_Rumi walking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi walking_Rumi walking.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi_jumping.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Rumi_jumping.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Villager walking_Villager walking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GraphicAssets/Sprites/Villager walking_Villager walking.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/MainScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/MainScreenManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +94,7 @@
       <workItem from="1687490039409" duration="1264000" />
       <workItem from="1688525818394" duration="8092000" />
       <workItem from="1689269206423" duration="1070000" />
-      <workItem from="1689619422450" duration="1300000" />
+      <workItem from="1689619422450" duration="4148000" />
     </task>
     <servers />
   </component>
