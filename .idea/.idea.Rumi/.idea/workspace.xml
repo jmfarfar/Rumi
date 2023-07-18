@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c61df82b-4c55-4cc1-96dd-d186518d3677" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <workItem from="1687490039409" duration="1264000" />
       <workItem from="1688525818394" duration="8092000" />
       <workItem from="1689269206423" duration="1070000" />
-      <workItem from="1689619422450" duration="5454000" />
+      <workItem from="1689619422450" duration="6654000" />
     </task>
     <servers />
   </component>
