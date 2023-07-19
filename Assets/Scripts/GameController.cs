@@ -1,17 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 // Source: https://www.youtube.com/watch?v=odStG_LfPMQ ;
 // https://www.youtube.com/watch?v=VE_bkPrrZdE
 public class GameController : MonoBehaviour
 {
+    private bool breakableVisible = true;
+    
     // private Vector2 startPos;
     private Vector2 checkpointPos;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D playerRb;
     [SerializeField] private HealthManager healthManager;
+    [SerializeField] private GameObject breakeableFloor;
 
     private void Awake()
     {
@@ -22,6 +26,14 @@ public class GameController : MonoBehaviour
     {
         checkpointPos = transform.position;
         playerRb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            DeactivateFloor();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -54,5 +66,11 @@ public class GameController : MonoBehaviour
         spriteRenderer.enabled = true;
         playerRb.simulated = true;
         healthManager.RecoverHealth(100f);
+    }
+
+    public void DeactivateFloor()
+    {
+        breakableVisible = !breakableVisible;
+        breakeableFloor.SetActive(breakableVisible);
     }
 }
