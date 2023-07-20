@@ -71,6 +71,7 @@ public class GameController : MonoBehaviour
     public void DeactivateFloor()
     {
         breakableVisible = !breakableVisible;
+        AudioManager.Instance.PlaySFX("Sfx_IceBreaking");
         breakeableFloor.SetActive(breakableVisible);
     }
 }

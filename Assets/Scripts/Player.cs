@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,10 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
     private float dashCDTimer;
     private bool _isDashing;
 
+    private void Awake()
+    {
+        AudioManager.Instance.PlayMusic("Mu_Niv1");
+    }
 
     // Start is called before the first frame update
     void Start()
