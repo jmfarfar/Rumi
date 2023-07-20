@@ -24,7 +24,7 @@ public abstract class Enemy : MonoBehaviour
         //Debug.DrawRay(transform.position, dir, Color.red);
 
 
-        hitInfo = Physics2D.BoxCastAll(transform.position - new Vector3(0, 0.2f, 0), new Vector2(1.5f, 1), 0f, dir);
+        hitInfo = Physics2D.BoxCastAll(transform.position - new Vector3(0, 0.2f, 0), new Vector2(1.5f, 2.3f), 0f, dir);
 
         if (hitInfo.Length < 0)
         {
@@ -62,7 +62,7 @@ public abstract class Enemy : MonoBehaviour
     protected void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position - new Vector3(0, 0.2f, 0), new Vector3(1.5f, 1, 1));
+        Gizmos.DrawWireCube(transform.position - new Vector3(0, 0.2f, 0), new Vector3(1.5f, 2.3f, 1));
     }
 
     protected IEnumerator DelayDeath(GameObject obj)
