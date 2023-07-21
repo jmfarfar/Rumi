@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c61df82b-4c55-4cc1-96dd-d186518d3677" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/MainScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/MainScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/Prefabs/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/Prefabs/AudioManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music/Icicle Mountain [Ice Climber]   Super Smash Bros Mele.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Music/Icicle Mountain [Ice Climber]   Super Smash Bros Mele.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/MainScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI_Scripts/MainScreenManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +96,7 @@
       <workItem from="1689619422450" duration="6654000" />
       <workItem from="1689706426959" duration="2683000" />
       <workItem from="1689808713556" duration="4599000" />
+      <workItem from="1689877837968" duration="1292000" />
     </task>
     <servers />
   </component>
