@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - HealthRune
   - Obstacle
+  - Limit
   layers:
   - Default
   - TransparentFX
