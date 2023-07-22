@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField]
     protected int hitPoints;
     [SerializeField]
-    private Animator animator;
+    private Animator animatorFX;
 
     protected Vector2 dir = new Vector2(8, 0);
     protected RaycastHit2D[] hitInfo;
@@ -53,12 +53,17 @@ public abstract class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == TagManager.PLAYER && !_isAttacking)
         {
-            animator.SetBool("gotHit", true);
-            TakeDamage(1);
+            animatorFX.SetBool("gotHit", true);
+            TakeDamage(1);            
         }
     }
 
-    protected void OnDrawGizmos()
+    protected void OnCollisionExit2D(Collision2D collision)
+    {
+        animatorFX.SetBool("gotHit", false);
+    }
+
+    protected virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position - new Vector3(0, 0.2f, 0), new Vector3(1.5f, 2.3f, 1));
