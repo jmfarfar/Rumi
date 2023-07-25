@@ -53,7 +53,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == TagManager.PLAYER && !_isAttacking)
         {
-            animator.SetBool("gotHit", true);
+            animatorFX.SetBool("gotHit", true);
             AudioManager.Instance.PlaySFX("Sfx_Hit");
             TakeDamage(1);
         }

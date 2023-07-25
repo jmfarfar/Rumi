@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c61df82b-4c55-4cc1-96dd-d186518d3677" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rumi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Workspaces/Rejon/TestLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +100,8 @@
       <workItem from="1689706426959" duration="2683000" />
       <workItem from="1689808713556" duration="4599000" />
       <workItem from="1689877837968" duration="1292000" />
+      <workItem from="1689990932642" duration="1836000" />
+      <workItem from="1690034576559" duration="2738000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,7 @@ public class Player : MonoBehaviour, ICharacter, IJumpable
 
     private void Awake()
     {
-        // AudioManager.Instance.PlayMusic("Mu_Niv1");
+        AudioManager.Instance.PlayMusic("Mu_Niv1");
     }
 
     // Start is called before the first frame update
