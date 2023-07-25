@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.volume = 3f;
         sfxSource.volume = 3f;
-        PlayMusic("SnowLevel");
+        // PlayMusic("Mu_Niv1");
     }
 
     public void PlayMusic(string name)

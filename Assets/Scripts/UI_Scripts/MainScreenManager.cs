@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,11 @@ public class MainScreenManager : MonoBehaviour
 {
     [SerializeField] private GameObject panelMenu;
     [SerializeField] private GameObject panelCredits;
+
+    private void Awake()
+    {
+        AudioManager.Instance.PlayMusic("Mu_MainMenu");
+    }
 
     void Start()
     {

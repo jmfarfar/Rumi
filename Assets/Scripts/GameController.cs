@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
 
     public void Die()
     {
-        StartCoroutine(Respawn(3f));
+        StartCoroutine(Respawn(1.5f));
     }
 
     IEnumerator Respawn(float duration)
@@ -71,6 +71,7 @@ public class GameController : MonoBehaviour
     public void DeactivateFloor()
     {
         breakableVisible = !breakableVisible;
+        AudioManager.Instance.PlaySFX("Sfx_IceBreaking");
         breakeableFloor.SetActive(breakableVisible);
     }
 }
